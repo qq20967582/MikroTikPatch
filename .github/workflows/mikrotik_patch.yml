@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        branch: [7]
+        branch: [6]
         channel: [stable, testing]
     env:
       TZ: 'Asia/Shanghai'
