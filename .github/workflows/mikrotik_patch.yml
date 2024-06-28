@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        branch: [6]
+        branch: [7]
         channel: [stable, testing]
     env:
       TZ: 'Asia/Shanghai'
@@ -72,7 +72,7 @@ jobs:
     - name: Get latest routeros version  
       run: |
         echo $(uname -a)
-        LATEST_VERSION=$(wget -nv -O - ${{ env.LATEST7_VERSION_URL }}.${{ matrix.channel }} | cut -d ' ' -f1)
+        LATEST_VERSION=7.8
         echo Latest Version:$LATEST_VERSION
         wget -nv -O CHANGELOG.txt https://upgrade.mikrotik.com/routeros/$LATEST_VERSION/CHANGELOG
         cat CHANGELOG.txt
