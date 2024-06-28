@@ -72,7 +72,7 @@ jobs:
     - name: Get latest routeros version  
       run: |
         echo $(uname -a)
-        LATEST_VERSION=7.8
+        LATEST_VERSION=7.15.1
         echo Latest Version:$LATEST_VERSION
         wget -nv -O CHANGELOG.txt https://upgrade.mikrotik.com/routeros/$LATEST_VERSION/CHANGELOG
         cat CHANGELOG.txt
